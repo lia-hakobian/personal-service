@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +12,6 @@
     :root {
       --bg: #090909;
       --panel: rgba(255,255,255,0.04);
-      --panel-2: rgba(255,255,255,0.06);
       --border: rgba(255,255,255,0.09);
       --text: #f4f1ed;
       --muted: #b7aea7;
@@ -21,7 +19,6 @@
       --accent: #7a1f2b;
       --accent-2: #30463a;
       --shadow: 0 20px 60px rgba(0,0,0,0.42);
-      --radius: 24px;
       --max: 1240px;
     }
 
@@ -183,7 +180,7 @@
     .hero-copy {
       max-width: 690px;
       color: var(--muted);
-      font-size: 1.04rem;
+      font-size: 1.02rem;
       margin-bottom: 30px;
     }
 
@@ -366,7 +363,7 @@
 
     .about-main,
     .about-side {
-      padding: 30px;
+      padding: 34px;
       border-radius: 24px;
       background: var(--panel);
       border: 1px solid var(--border);
@@ -412,39 +409,69 @@
     }
 
     .mentor-card {
+      position: relative;
       margin-top: 20px;
-      padding: 22px;
-      border-radius: 18px;
+      padding: 24px;
+      border-radius: 20px;
       background:
-        linear-gradient(135deg, rgba(122,31,43,0.12), rgba(48,70,58,0.10)),
+        linear-gradient(135deg, rgba(122,31,43,0.16), rgba(48,70,58,0.10)),
         rgba(255,255,255,0.03);
       border: 1px solid rgba(255,255,255,0.08);
+      overflow: hidden;
+    }
+
+    .mentor-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.35), rgba(255,255,255,0));
     }
 
     .mentor-top {
       display: flex;
       justify-content: space-between;
       gap: 14px;
-      align-items: center;
-      margin-bottom: 10px;
+      align-items: flex-start;
+      margin-bottom: 12px;
       flex-wrap: wrap;
     }
 
+    .mentor-title-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .mentor-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #caa9ae;
+    }
+
     .mentor-top strong {
-      font-size: 1rem;
-      letter-spacing: -0.01em;
+      font-size: 1.08rem;
+      letter-spacing: -0.02em;
     }
 
     .mentor-badge {
       font-size: 0.72rem;
       text-transform: uppercase;
       letter-spacing: 0.12em;
-      color: #dcc8bb;
-      padding: 8px 10px;
+      color: #f0e7e0;
+      padding: 8px 12px;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.09);
-      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.05);
       white-space: nowrap;
+    }
+
+    .mentor-card p {
+      color: #d2c7c0;
+      font-size: 0.94rem;
+      max-width: 90%;
     }
 
     /* SERVICES */
@@ -457,7 +484,7 @@
     .service-card {
       grid-column: span 4;
       min-height: 210px;
-      padding: 24px;
+      padding: 28px;
       border-radius: 24px;
       background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03));
       border: 1px solid rgba(255,255,255,0.08);
@@ -845,7 +872,7 @@
             <div class="hero-subtitle">HTML/CSS, UX & Sales Focus</div>
 
             <p class="hero-copy">
-              I build and improve Shopify stores with a focus on structure, usability, and conversion — through cleaner layouts, practical customization, and sharper storefront flow.
+              Shopify stores built and refined with a focus on structure, usability, and conversion.
             </p>
 
             <div class="hero-actions">
@@ -855,16 +882,16 @@
 
             <div class="hero-points">
               <div class="point">
-                <strong>Store Structure</strong>
-                <span>Clearer organization and smoother page flow.</span>
+                <strong>Structure</strong>
+                <span>Cleaner flow and stronger organization.</span>
               </div>
               <div class="point">
-                <strong>UX Focus</strong>
-                <span>Layouts built to feel easier to browse and shop.</span>
+                <strong>Usability</strong>
+                <span>Smoother storefront experience.</span>
               </div>
               <div class="point">
-                <strong>Sales-Aware Thinking</strong>
-                <span>Design choices that support clarity and action.</span>
+                <strong>Conversion</strong>
+                <span>Sharper product and page direction.</span>
               </div>
             </div>
           </div>
@@ -909,26 +936,22 @@
           </div>
 
           <p class="section-sub">
-            Shopify support focused on cleaner layouts, stronger organization, and better customer flow.
+            Clean Shopify support with a focus on flow, presentation, and structure.
           </p>
         </div>
 
         <div class="about-grid">
           <div class="about-main">
             <p>
-              I work with Shopify customization, product setup, collection structure, and storefront improvements using HTML/CSS and Shopify sections.
+              I work with Shopify customization, store setup, collection structure, and storefront improvement using HTML/CSS and Shopify sections.
             </p>
 
             <p>
-              My focus is simple: cleaner layouts, smoother flow, and more usable storefront experiences that feel polished and intentional.
+              My focus is clean layout, smooth flow, and stronger product presentation.
             </p>
 
             <p>
-              My background in sales and account management helps me think beyond visuals and pay attention to how products are presented, understood, and acted on.
-            </p>
-
-            <p>
-              I aim to deliver practical improvements that support both usability and performance.
+              With a background in sales and account management, I also bring a clear understanding of customer behavior and decision-making.
             </p>
           </div>
 
@@ -945,12 +968,16 @@
             </div>
 
             <div class="mentor-card">
+              <div class="mentor-line"></div>
               <div class="mentor-top">
-                <strong>Mentor Mariam</strong>
+                <div class="mentor-title-wrap">
+                  <span class="mentor-label">Mentorship</span>
+                  <strong>Mentor Mariam</strong>
+                </div>
                 <span class="mentor-badge">Success Academy</span>
               </div>
               <p>
-                Trained under Mentor Mariam through Success Academy, with a focus on Shopify structure, usability, and practical storefront improvement.
+                Trained under Mentor Mariam with a focus on Shopify structure, usability, and practical execution.
               </p>
             </div>
           </div>
@@ -967,7 +994,7 @@
           </div>
 
           <p class="section-sub">
-            Focused support for setup, customization, product presentation, and storefront optimization.
+            Practical Shopify support for cleaner, stronger storefronts.
           </p>
         </div>
 
@@ -1020,7 +1047,7 @@
           </div>
 
           <p class="section-sub">
-            A selection of Shopify storefront screens, product layouts, collection views, and content sections.
+            Selected storefront visuals focused on layout, structure, and presentation.
           </p>
         </div>
 
@@ -1090,7 +1117,7 @@
           </div>
 
           <p class="section-sub">
-            Practical, detail-focused, and built around what improves the storefront without adding noise.
+            Clear thinking, clean execution, and practical improvement.
           </p>
         </div>
 
@@ -1124,7 +1151,7 @@
           <div class="section-kicker">Let’s Work Together</div>
           <h2>Need a Shopify store that feels cleaner, sharper, and easier to shop?</h2>
           <p>
-            Available for Shopify customization, product page improvement, store setup, optimization, and ongoing storefront support.
+            Available for Shopify customization, optimization, and storefront improvement.
           </p>
 
           <a href="https://www.upwork.com/freelancers/~01b53803e51f4f0246" target="_blank" class="btn btn-primary">Contact via Upwork</a>
