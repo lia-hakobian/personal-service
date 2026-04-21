@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +12,6 @@
   <style>
     :root {
       --bg: #090909;
-      --bg-soft: #111111;
       --panel: rgba(255,255,255,0.04);
       --panel-2: rgba(255,255,255,0.06);
       --border: rgba(255,255,255,0.09);
@@ -20,10 +20,8 @@
       --muted-2: #8e8780;
       --accent: #7a1f2b;
       --accent-2: #30463a;
-      --accent-3: #2a2019;
       --shadow: 0 20px 60px rgba(0,0,0,0.42);
       --radius: 24px;
-      --radius-sm: 16px;
       --max: 1240px;
     }
 
@@ -56,6 +54,7 @@
 
     img {
       display: block;
+      width: 100%;
       max-width: 100%;
     }
 
@@ -80,6 +79,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 24px;
+      padding: 0 2px;
     }
 
     .brand {
@@ -427,6 +427,7 @@
       gap: 14px;
       align-items: center;
       margin-bottom: 10px;
+      flex-wrap: wrap;
     }
 
     .mentor-top strong {
@@ -500,7 +501,7 @@
       color: var(--muted);
     }
 
-    /* PORTFOLIO */
+    /* WORK */
     .portfolio-wrap {
       display: grid;
       gap: 18px;
@@ -536,18 +537,6 @@
       z-index: 1;
     }
 
-    .featured-project::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 260px;
-      height: 120px;
-      background: linear-gradient(to top left, rgba(0,0,0,0.95), rgba(0,0,0,0.55), transparent);
-      z-index: 1;
-      pointer-events: none;
-    }
-
     .project-content {
       position: absolute;
       left: 28px;
@@ -558,6 +547,7 @@
       justify-content: space-between;
       gap: 20px;
       align-items: end;
+      flex-wrap: wrap;
     }
 
     .project-text {
@@ -602,7 +592,7 @@
     }
 
     .project-card {
-      grid-column: span 4;
+      grid-column: span 6;
       position: relative;
       min-height: 380px;
       border-radius: 24px;
@@ -636,18 +626,6 @@
       background:
         linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.28) 40%, rgba(0,0,0,0.06) 70%, rgba(0,0,0,0.02) 100%);
       z-index: 1;
-    }
-
-    .project-card::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 170px;
-      height: 90px;
-      background: linear-gradient(to top left, rgba(0,0,0,0.95), rgba(0,0,0,0.55), transparent);
-      z-index: 1;
-      pointer-events: none;
     }
 
     .project-card-content {
@@ -748,9 +726,10 @@
       align-items: center;
       border-top: 1px solid rgba(255,255,255,0.08);
       padding-top: 24px;
+      flex-wrap: wrap;
     }
 
-    /* RESPONSIVE */
+    /* MOBILE */
     @media (max-width: 1120px) {
       .hero-grid,
       .about-grid {
@@ -771,39 +750,35 @@
         grid-column: span 6;
       }
 
-      .project-card {
-        grid-column: span 6;
-      }
-
       .featured-project {
-        min-height: 480px;
-      }
-
-      .project-content {
-        flex-direction: column;
-        align-items: flex-start;
+        min-height: 460px;
       }
     }
 
-    @media (max-width: 720px) {
+    @media (max-width: 760px) {
+      .nav-wrap {
+        position: static;
+      }
+
       nav {
+        min-height: auto;
         flex-direction: column;
-        justify-content: center;
-        gap: 12px;
-        padding: 14px 0;
+        align-items: flex-start;
+        padding: 18px 0;
       }
 
       .nav-links {
-        justify-content: center;
+        gap: 14px;
+        justify-content: flex-start;
       }
 
       .hero {
         min-height: auto;
-        padding-top: 52px;
+        padding: 54px 0 34px;
       }
 
       .section {
-        padding: 74px 0;
+        padding: 72px 0;
       }
 
       .section-head {
@@ -827,18 +802,13 @@
       }
 
       .featured-project {
-        min-height: 410px;
+        min-height: 360px;
       }
 
       .project-content {
         left: 20px;
         right: 20px;
         bottom: 20px;
-      }
-
-      .footer-row {
-        flex-direction: column;
-        align-items: flex-start;
       }
 
       h1 {
@@ -1056,7 +1026,7 @@
 
         <div class="portfolio-wrap">
           <article class="featured-project">
-            <img src="images/hero1.png" alt="Shopify hero section preview">
+            <img src="https://cdn.shopify.com/s/files/1/0761/6056/5388/files/hero_png.png?v=1776789064" alt="Shopify hero section preview">
             <div class="project-content">
               <div class="project-text">
                 <div class="project-kicker">Featured Project</div>
@@ -1072,43 +1042,7 @@
 
           <div class="portfolio-grid">
             <article class="project-card">
-              <img src="images/hero2.png" alt="Shopify homepage visual frame">
-              <div class="project-card-content">
-                <span class="project-tag">Visual Frame</span>
-                <h3>Motion-Based Hero Preview</h3>
-                <p>Video-based storefront styling translated into a strong static presentation.</p>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <img src="images/grid.png" alt="Shopify category grid">
-              <div class="project-card-content">
-                <span class="project-tag">Collection Grid</span>
-                <h3>Category Layout & Navigation</h3>
-                <p>Structured category blocks with a clean premium storefront feel.</p>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <img src="images/journal.png" alt="Shopify journal section">
-              <div class="project-card-content">
-                <span class="project-tag">Content Section</span>
-                <h3>Journal / Editorial Section</h3>
-                <p>Brand content presented in a layout that feels polished and intentional.</p>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <img src="images/kitchen.png" alt="Shopify collection page">
-              <div class="project-card-content">
-                <span class="project-tag">Collection Page</span>
-                <h3>Collection Banner & Product Listing</h3>
-                <p>Clear category entry with visual hierarchy and organized product display.</p>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <img src="images/product.png" alt="Shopify product page">
+              <img src="https://cdn.shopify.com/s/files/1/0761/6056/5388/files/product_png.png?v=1776789042" alt="Shopify product page">
               <div class="project-card-content">
                 <span class="project-tag">Product Page</span>
                 <h3>Product Layout & CTA Structure</h3>
@@ -1117,11 +1051,29 @@
             </article>
 
             <article class="project-card">
-              <img src="images/footer.png" alt="Shopify footer and contact section">
+              <img src="https://cdn.shopify.com/s/files/1/0761/6056/5388/files/collection.ong.png?v=1776789040" alt="Shopify collection grid">
               <div class="project-card-content">
-                <span class="project-tag">Store Support</span>
-                <h3>Footer, Contact & Store Information</h3>
-                <p>Supporting sections built for clarity, trust, and cleaner user experience.</p>
+                <span class="project-tag">Collection Grid</span>
+                <h3>Category Layout & Navigation</h3>
+                <p>Structured product grouping with a clean premium storefront feel.</p>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img src="https://cdn.shopify.com/s/files/1/0761/6056/5388/files/kitchen_png.png?v=1776789040" alt="Shopify collection page">
+              <div class="project-card-content">
+                <span class="project-tag">Collection Page</span>
+                <h3>Collection Banner & Product Listing</h3>
+                <p>Clear category entry with visual hierarchy and organized product display.</p>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img src="https://cdn.shopify.com/s/files/1/0761/6056/5388/files/journal_png.png?v=1776789029" alt="Shopify journal section">
+              <div class="project-card-content">
+                <span class="project-tag">Content Section</span>
+                <h3>Journal / Editorial Section</h3>
+                <p>Brand content presented in a layout that feels polished and intentional.</p>
               </div>
             </article>
           </div>
