@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ofelya Hakobyan | Shopify Customization & Optimization</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -49,18 +50,11 @@
       text-decoration: none;
     }
 
-    img {
-      display: block;
-      width: 100%;
-      max-width: 100%;
-    }
-
     .container {
       width: min(92%, var(--max));
       margin: 0 auto;
     }
 
-    /* NAV */
     .nav-wrap {
       position: sticky;
       top: 0;
@@ -76,7 +70,6 @@
       align-items: center;
       justify-content: space-between;
       gap: 24px;
-      padding: 0 2px;
     }
 
     .brand {
@@ -84,7 +77,6 @@
       font-weight: 800;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: var(--text);
       white-space: nowrap;
     }
 
@@ -113,16 +105,8 @@
       background: rgba(255,255,255,0.04);
       color: var(--text);
       font-weight: 500;
-      transition: 0.25s ease;
     }
 
-    .nav-cta:hover {
-      transform: translateY(-1px);
-      border-color: rgba(122,31,43,0.38);
-      background: rgba(122,31,43,0.16);
-    }
-
-    /* HERO */
     .hero {
       min-height: calc(100vh - 78px);
       display: flex;
@@ -146,7 +130,7 @@
       border: 1px solid rgba(255,255,255,0.10);
       background: rgba(255,255,255,0.03);
       color: #dcc8bb;
-      font-size: 0.80rem;
+      font-size: 0.8rem;
       text-transform: uppercase;
       letter-spacing: 0.12em;
       margin-bottom: 22px;
@@ -178,7 +162,7 @@
     }
 
     .hero-copy {
-      max-width: 690px;
+      max-width: 620px;
       color: var(--muted);
       font-size: 1.02rem;
       margin-bottom: 30px;
@@ -195,11 +179,10 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
       padding: 14px 22px;
       border-radius: 999px;
       font-weight: 600;
-      transition: 0.30s ease;
+      transition: 0.3s ease;
       border: 1px solid transparent;
     }
 
@@ -209,21 +192,16 @@
       box-shadow: 0 14px 32px rgba(122,31,43,0.28);
     }
 
-    .btn-primary:hover {
+    .btn-primary:hover,
+    .btn-secondary:hover,
+    .nav-cta:hover {
       transform: translateY(-2px);
-      box-shadow: 0 18px 40px rgba(122,31,43,0.34);
     }
 
     .btn-secondary {
       background: rgba(255,255,255,0.03);
       border-color: rgba(255,255,255,0.12);
       color: var(--text);
-    }
-
-    .btn-secondary:hover {
-      transform: translateY(-2px);
-      border-color: rgba(255,255,255,0.18);
-      background: rgba(255,255,255,0.06);
     }
 
     .hero-points {
@@ -245,7 +223,6 @@
       display: block;
       margin-bottom: 6px;
       font-size: 0.94rem;
-      color: var(--text);
     }
 
     .point span {
@@ -255,8 +232,8 @@
 
     .hero-side {
       position: relative;
-      padding: 28px;
-      border-radius: 28px;
+      padding: 30px;
+      border-radius: 30px;
       background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
       border: 1px solid rgba(255,255,255,0.10);
       box-shadow: var(--shadow);
@@ -314,7 +291,6 @@
     .mini-panel strong {
       display: block;
       margin-bottom: 8px;
-      font-size: 0.98rem;
     }
 
     .mini-panel p {
@@ -322,7 +298,6 @@
       font-size: 0.95rem;
     }
 
-    /* SECTIONS */
     .section {
       padding: 100px 0;
     }
@@ -354,7 +329,6 @@
       color: var(--muted);
     }
 
-    /* ABOUT */
     .about-grid {
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
@@ -362,24 +336,21 @@
     }
 
     .about-main,
-    .about-side {
+    .about-side,
+    .work-proof,
+    .cta-box {
       padding: 34px;
-      border-radius: 24px;
+      border-radius: 26px;
       background: var(--panel);
       border: 1px solid var(--border);
       box-shadow: var(--shadow);
     }
 
     .about-main p,
-    .about-side p {
+    .about-side p,
+    .work-proof p {
       color: var(--muted);
       margin-bottom: 16px;
-      font-size: 1rem;
-    }
-
-    .about-main p:last-child,
-    .about-side p:last-child {
-      margin-bottom: 0;
     }
 
     .focus-list {
@@ -411,12 +382,12 @@
     .mentor-card {
       position: relative;
       margin-top: 20px;
-      padding: 24px;
-      border-radius: 20px;
+      padding: 26px;
+      border-radius: 22px;
       background:
-        linear-gradient(135deg, rgba(122,31,43,0.16), rgba(48,70,58,0.10)),
+        linear-gradient(135deg, rgba(122,31,43,0.18), rgba(48,70,58,0.12)),
         rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.09);
       overflow: hidden;
     }
 
@@ -426,7 +397,7 @@
       left: 0;
       width: 100%;
       height: 1px;
-      background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.35), rgba(255,255,255,0));
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.42), transparent);
     }
 
     .mentor-top {
@@ -452,7 +423,7 @@
     }
 
     .mentor-top strong {
-      font-size: 1.08rem;
+      font-size: 1.12rem;
       letter-spacing: -0.02em;
     }
 
@@ -468,13 +439,6 @@
       white-space: nowrap;
     }
 
-    .mentor-card p {
-      color: #d2c7c0;
-      font-size: 0.94rem;
-      max-width: 90%;
-    }
-
-    /* SERVICES */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
@@ -483,7 +447,7 @@
 
     .service-card {
       grid-column: span 4;
-      min-height: 210px;
+      min-height: 190px;
       padding: 28px;
       border-radius: 24px;
       background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03));
@@ -493,20 +457,9 @@
       transition: 0.28s ease;
     }
 
-    .service-card::after {
-      content: "";
-      position: absolute;
-      inset: auto auto -40px -40px;
-      width: 120px;
-      height: 120px;
-      background: radial-gradient(circle, rgba(122,31,43,0.18), transparent 70%);
-      pointer-events: none;
-    }
-
     .service-card:hover {
       transform: translateY(-5px);
       border-color: rgba(122,31,43,0.34);
-      box-shadow: 0 20px 50px rgba(0,0,0,0.32);
     }
 
     .service-number {
@@ -528,167 +481,31 @@
       color: var(--muted);
     }
 
-    /* WORK */
-    .portfolio-wrap {
-      display: grid;
-      gap: 18px;
-    }
-
-    .featured-project {
-      position: relative;
-      min-height: 560px;
-      border-radius: 30px;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.08);
-      background: #111;
-      box-shadow: var(--shadow);
-    }
-
-    .featured-project img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.45s ease;
-    }
-
-    .featured-project:hover img {
-      transform: scale(1.03);
-    }
-
-    .featured-project::before {
-      content: "";
-      position: absolute;
-      inset: 0;
+    .work-proof {
+      text-align: center;
       background:
-        linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.20) 42%, rgba(0,0,0,0.06) 65%, rgba(0,0,0,0.02) 100%);
-      z-index: 1;
+        radial-gradient(circle at top left, rgba(122,31,43,0.18), transparent 32%),
+        radial-gradient(circle at bottom right, rgba(48,70,58,0.14), transparent 30%),
+        rgba(255,255,255,0.04);
     }
 
-    .project-content {
-      position: absolute;
-      left: 28px;
-      right: 28px;
-      bottom: 28px;
-      z-index: 2;
+    .proof-list {
       display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      align-items: end;
+      justify-content: center;
       flex-wrap: wrap;
+      gap: 10px;
+      margin: 24px 0;
     }
 
-    .project-text {
-      max-width: 700px;
-    }
-
-    .project-kicker {
-      font-size: 0.76rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #d5c3b7;
-      margin-bottom: 10px;
-    }
-
-    .project-title {
-      font-size: clamp(1.8rem, 3vw, 2.7rem);
-      line-height: 1.02;
-      letter-spacing: -0.04em;
-      margin-bottom: 10px;
-    }
-
-    .project-copy {
-      color: #d2c7c0;
-      max-width: 620px;
-      font-size: 0.98rem;
-    }
-
-    .project-side-tag {
-      padding: 12px 16px;
+    .proof-pill {
+      padding: 10px 14px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.10);
-      color: #f3ece7;
-      font-size: 0.88rem;
-      white-space: nowrap;
-    }
-
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 18px;
-    }
-
-    .project-card {
-      grid-column: span 6;
-      position: relative;
-      min-height: 380px;
-      border-radius: 24px;
-      overflow: hidden;
+      background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.08);
-      background: #101010;
-      box-shadow: var(--shadow);
-      transition: 0.28s ease;
-    }
-
-    .project-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(122,31,43,0.35);
-    }
-
-    .project-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.4s ease;
-    }
-
-    .project-card:hover img {
-      transform: scale(1.04);
-    }
-
-    .project-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.28) 40%, rgba(0,0,0,0.06) 70%, rgba(0,0,0,0.02) 100%);
-      z-index: 1;
-    }
-
-    .project-card-content {
-      position: absolute;
-      left: 20px;
-      right: 20px;
-      bottom: 18px;
-      z-index: 2;
-    }
-
-    .project-card h3 {
-      font-size: 1.15rem;
-      margin-bottom: 6px;
-      line-height: 1.18;
-    }
-
-    .project-card p {
-      color: #d1c8c2;
-      font-size: 0.92rem;
-      max-width: 90%;
-    }
-
-    .project-tag {
-      display: inline-block;
-      margin-bottom: 10px;
-      padding: 8px 10px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.09);
       color: #eee4dd;
-      font-size: 0.76rem;
-      text-transform: uppercase;
-      letter-spacing: 0.09em;
+      font-size: 0.9rem;
     }
 
-    /* STRENGTHS */
     .strength-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -713,17 +530,12 @@
       font-size: 0.94rem;
     }
 
-    /* CTA */
     .cta-box {
-      padding: 44px;
-      border-radius: 30px;
+      text-align: center;
       background:
         radial-gradient(circle at top left, rgba(122,31,43,0.22), transparent 30%),
         radial-gradient(circle at bottom right, rgba(48,70,58,0.15), transparent 30%),
         rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      box-shadow: var(--shadow);
-      text-align: center;
     }
 
     .cta-box h2 {
@@ -739,7 +551,6 @@
       color: var(--muted);
     }
 
-    /* FOOTER */
     footer {
       padding: 34px 0 46px;
       color: var(--muted-2);
@@ -756,7 +567,6 @@
       flex-wrap: wrap;
     }
 
-    /* MOBILE */
     @media (max-width: 1120px) {
       .hero-grid,
       .about-grid {
@@ -775,10 +585,6 @@
 
       .service-card {
         grid-column: span 6;
-      }
-
-      .featured-project {
-        min-height: 460px;
       }
     }
 
@@ -815,27 +621,17 @@
       .hero-side,
       .about-main,
       .about-side,
+      .work-proof,
       .cta-box {
         padding: 22px;
       }
 
-      .service-card,
-      .project-card {
+      .service-card {
         grid-column: span 12;
       }
 
       .strength-grid {
         grid-template-columns: 1fr;
-      }
-
-      .featured-project {
-        min-height: 360px;
-      }
-
-      .project-content {
-        left: 20px;
-        right: 20px;
-        bottom: 20px;
       }
 
       h1 {
@@ -844,8 +640,8 @@
     }
   </style>
 </head>
-<body>
 
+<body>
   <div class="nav-wrap">
     <div class="container">
       <nav>
@@ -872,11 +668,11 @@
             <div class="hero-subtitle">HTML/CSS, UX & Sales Focus</div>
 
             <p class="hero-copy">
-              Shopify stores built and refined with a focus on structure, usability, and conversion.
+              Built for structure, clarity, and conversion.
             </p>
 
             <div class="hero-actions">
-              <a href="#work" class="btn btn-primary">View Selected Work</a>
+              <a href="#work" class="btn btn-primary">View Work</a>
               <a href="https://www.upwork.com/freelancers/~01b53803e51f4f0246" target="_blank" class="btn btn-secondary">Contact via Upwork</a>
             </div>
 
@@ -910,17 +706,17 @@
 
             <div class="mini-panel">
               <strong>Approach</strong>
-              <p>Clean structure, practical improvements, and no unnecessary complexity.</p>
+              <p>Clean structure. No noise.</p>
             </div>
 
             <div class="mini-panel">
               <strong>Focus</strong>
-              <p>Better usability, stronger presentation, and more polished storefront experience.</p>
+              <p>Usability. Presentation. Flow.</p>
             </div>
 
             <div class="mini-panel">
               <strong>Work Style</strong>
-              <p>Independent, detail-focused, and clear in communication.</p>
+              <p>Independent. Precise. Clear.</p>
             </div>
           </div>
         </div>
@@ -932,11 +728,11 @@
         <div class="section-head">
           <div>
             <div class="section-kicker">About</div>
-            <h2 class="section-title">Built around structure, usability, and practical improvement.</h2>
+            <h2 class="section-title">Clean Shopify support with a sales-aware eye.</h2>
           </div>
 
           <p class="section-sub">
-            Clean Shopify support with a focus on flow, presentation, and structure.
+            Focused on flow, presentation, and storefront structure.
           </p>
         </div>
 
@@ -951,7 +747,7 @@
             </p>
 
             <p>
-              With a background in sales and account management, I also bring a clear understanding of customer behavior and decision-making.
+              My sales and account management background helps me understand customer behavior and decision-making.
             </p>
           </div>
 
@@ -959,12 +755,12 @@
             <div class="section-kicker" style="margin-bottom:16px;">Core Focus</div>
 
             <div class="focus-list">
-              <div class="focus-item">Clean storefront structure</div>
-              <div class="focus-item">Mobile-friendly thinking</div>
-              <div class="focus-item">Smoother shopping experience</div>
-              <div class="focus-item">Practical Shopify customization</div>
-              <div class="focus-item">Clearer product presentation</div>
-              <div class="focus-item">Conversion-aware updates</div>
+              <div class="focus-item">Store structure</div>
+              <div class="focus-item">Mobile-friendly flow</div>
+              <div class="focus-item">Product presentation</div>
+              <div class="focus-item">Shopify customization</div>
+              <div class="focus-item">UX improvements</div>
+              <div class="focus-item">Conversion support</div>
             </div>
 
             <div class="mentor-card">
@@ -990,11 +786,11 @@
         <div class="section-head">
           <div>
             <div class="section-kicker">Services</div>
-            <h2 class="section-title">What I can help Shopify stores with.</h2>
+            <h2 class="section-title">Shopify support for cleaner, stronger storefronts.</h2>
           </div>
 
           <p class="section-sub">
-            Practical Shopify support for cleaner, stronger storefronts.
+            Practical updates. Better structure. Sharper presentation.
           </p>
         </div>
 
@@ -1002,37 +798,37 @@
           <div class="service-card">
             <div class="service-number">01</div>
             <h3>Customization & Fixes</h3>
-            <p>Theme edits, section updates, layout fixes, and storefront refinements.</p>
+            <p>Theme edits, fixes, refinements.</p>
           </div>
 
           <div class="service-card">
             <div class="service-number">02</div>
             <h3>Store Optimization</h3>
-            <p>Usability-focused updates to improve structure, clarity, and shopping flow.</p>
+            <p>Structure. Clarity. Better flow.</p>
           </div>
 
           <div class="service-card">
             <div class="service-number">03</div>
-            <h3>Product Page Improvements</h3>
-            <p>Cleaner product layouts with better hierarchy and presentation.</p>
+            <h3>Product Pages</h3>
+            <p>Cleaner layouts. Stronger hierarchy.</p>
           </div>
 
           <div class="service-card">
             <div class="service-number">04</div>
-            <h3>Store Setup & Structure</h3>
-            <p>Product setup, collection organization, and stronger storefront structure.</p>
+            <h3>Store Setup</h3>
+            <p>Setup. Organization. Structure.</p>
           </div>
 
           <div class="service-card">
             <div class="service-number">05</div>
             <h3>Conversion Support</h3>
-            <p>Practical visual and structural improvements that support action.</p>
+            <p>Improvements that drive action.</p>
           </div>
 
           <div class="service-card">
             <div class="service-number">06</div>
-            <h3>Maintenance & Updates</h3>
-            <p>Ongoing edits, fixes, and storefront improvements as the store evolves.</p>
+            <h3>Maintenance</h3>
+            <p>Ongoing fixes & updates.</p>
           </div>
         </div>
       </div>
@@ -1040,70 +836,20 @@
 
     <section id="work" class="section">
       <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="section-kicker">Selected Work</div>
-            <h2 class="section-title">Store visuals that show structure, presentation, and flow.</h2>
-          </div>
-
-          <p class="section-sub">
-            Selected storefront visuals focused on layout, structure, and presentation.
+        <div class="work-proof">
+          <div class="section-kicker">Selected Work</div>
+          <h2 class="section-title">Portfolio and client work are available on Upwork.</h2>
+          <p>
+            View real projects, work history, and current profile details directly on Upwork.
           </p>
-        </div>
 
-        <div class="portfolio-wrap">
-          <article class="featured-project">
-            <img src="https://cdn.shopify.com/s/files/1/0761/6056/5388/files/hero_png.png?v=1776789064" alt="Shopify hero section preview">
-            <div class="project-content">
-              <div class="project-text">
-                <div class="project-kicker">Featured Project</div>
-                <h3 class="project-title">Shopify Store Hero & Visual Direction</h3>
-                <p class="project-copy">
-                  A strong landing experience built around bold visual composition, premium branding, and clean navigation structure.
-                </p>
-              </div>
-
-              <div class="project-side-tag">Homepage / Hero</div>
-            </div>
-          </article>
-
-          <div class="portfolio-grid">
-            <article class="project-card">
-              <img src="https://cdn.shopify.com/s/files/1/0761/6056/5388/files/product_png.png?v=1776789042" alt="Shopify product page">
-              <div class="project-card-content">
-                <span class="project-tag">Product Page</span>
-                <h3>Product Layout & CTA Structure</h3>
-                <p>Focused product detail page with strong image balance and action flow.</p>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <img src="https://cdn.shopify.com/s/files/1/0761/6056/5388/files/collection.ong.png?v=1776789040" alt="Shopify collection grid">
-              <div class="project-card-content">
-                <span class="project-tag">Collection Grid</span>
-                <h3>Category Layout & Navigation</h3>
-                <p>Structured product grouping with a clean premium storefront feel.</p>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <img src="https://cdn.shopify.com/s/files/1/0761/6056/5388/files/kitchen_png.png?v=1776789040" alt="Shopify collection page">
-              <div class="project-card-content">
-                <span class="project-tag">Collection Page</span>
-                <h3>Collection Banner & Product Listing</h3>
-                <p>Clear category entry with visual hierarchy and organized product display.</p>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <img src="https://cdn.shopify.com/s/files/1/0761/6056/5388/files/journal_png.png?v=1776789029" alt="Shopify journal section">
-              <div class="project-card-content">
-                <span class="project-tag">Content Section</span>
-                <h3>Journal / Editorial Section</h3>
-                <p>Brand content presented in a layout that feels polished and intentional.</p>
-              </div>
-            </article>
+          <div class="proof-list">
+            <span class="proof-pill">Shopify storefronts</span>
+            <span class="proof-pill">Product pages</span>
+            <span class="proof-pill">UX-focused updates</span>
           </div>
+
+          <a href="https://www.upwork.com/freelancers/~01b53803e51f4f0246" target="_blank" class="btn btn-primary">View Full Work on Upwork</a>
         </div>
       </div>
     </section>
@@ -1113,33 +859,33 @@
         <div class="section-head">
           <div>
             <div class="section-kicker">Strengths</div>
-            <h2 class="section-title">How I approach the work.</h2>
+            <h2 class="section-title">Simple, structured, practical.</h2>
           </div>
 
           <p class="section-sub">
-            Clear thinking, clean execution, and practical improvement.
+            Clear thinking, clean execution, and useful improvements.
           </p>
         </div>
 
         <div class="strength-grid">
           <div class="strength-card">
-            <h4>Structured Thinking</h4>
-            <p>I look at how pages connect, how users move, and where the experience can be improved.</p>
+            <h4>Structure</h4>
+            <p>Pages, collections, and flow organized with purpose.</p>
           </div>
 
           <div class="strength-card">
             <h4>Sales Perspective</h4>
-            <p>I pay attention to how products are presented and how design supports decision-making.</p>
+            <p>Product presentation shaped around customer behavior.</p>
           </div>
 
           <div class="strength-card">
             <h4>Clean Execution</h4>
-            <p>I focus on layouts that feel polished, consistent, and easier to use.</p>
+            <p>Polished layouts with consistent visual direction.</p>
           </div>
 
           <div class="strength-card">
-            <h4>Independent Workflow</h4>
-            <p>I work independently, communicate clearly, and stay focused on useful results.</p>
+            <h4>Clear Workflow</h4>
+            <p>Independent work, clear communication, focused results.</p>
           </div>
         </div>
       </div>
@@ -1149,7 +895,7 @@
       <div class="container">
         <div class="cta-box">
           <div class="section-kicker">Let’s Work Together</div>
-          <h2>Need a Shopify store that feels cleaner, sharper, and easier to shop?</h2>
+          <h2>Need a cleaner, sharper Shopify store?</h2>
           <p>
             Available for Shopify customization, optimization, and storefront improvement.
           </p>
@@ -1168,6 +914,5 @@
       </div>
     </div>
   </footer>
-
 </body>
 </html>
